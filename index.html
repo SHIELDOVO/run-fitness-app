@@ -591,12 +591,12 @@ const COMM_TABS = {
 
   // ① 关注：已关注创作者的动态
   关注: () => `
-    <div class="loc-bar"><svg class="ic xs"><use href="#i-user"/></svg><span>已关注 <b>12</b> 位创作者 · 今日更新 3 条</span><span class="sw" onclick="toast('管理关注列表')">管理 ›</span></div>
+    <div class="loc-bar"><svg class="ic xs"><use href="#i-user"/></svg><span>已关注 <b>12</b> 位创作者 · 今日更新 3 条</span><span class="sw" >管理 ›</span></div>
     <div class="post" onclick="go('postdetail')">
       <div class="head"><div class="avatar a1">鹿</div><div><div class="name">林深时见鹿</div><div class="meta">运动博主 · 32.5k 粉丝</div></div><div class="follow" onclick="followToggle(this);event.stopPropagation()">+ 关注</div></div>
       <div class="title">从 0 到半马：我的 12 周训练笔记</div>
       ${img('run','media')}
-      <div class="stats"><div class="s" onclick="likeToggle(this,1200);event.stopPropagation()"><svg class="ic xs"><use href="#i-heart"/></svg> <b>1.2k</b></div><div class="s" onclick="toast('查看评论');event.stopPropagation()"><svg class="ic xs"><use href="#i-comment"/></svg> <b>186</b></div><div class="s" onclick="toast('分享帖子');event.stopPropagation()"><svg class="ic xs"><use href="#i-share"/></svg> <b>92</b></div></div>
+      <div class="stats"><div class="s" onclick="likeToggle(this,1200);event.stopPropagation()"><svg class="ic xs"><use href="#i-heart"/></svg> <b>1.2k</b></div><div class="s" onclick="event.stopPropagation()"><svg class="ic xs"><use href="#i-comment"/></svg> <b>186</b></div><div class="s" onclick="event.stopPropagation()"><svg class="ic xs"><use href="#i-share"/></svg> <b>92</b></div></div>
     </div>
     <div class="post" onclick="go('postdetail')">
       <div class="head"><div class="avatar a2">陈</div><div><div class="name">陈一跑</div><div class="meta">3 小时前 · 力量训练</div></div><div class="follow" onclick="followToggle(this);event.stopPropagation()">+ 关注</div></div>
@@ -623,18 +623,18 @@ const COMM_TABS = {
       ${rawImg('marathon')}
       <div class="ov"><span class="tag">本周精选</span><div class="tt">跑起来的第一步，<br>从这 12 周开始</div><div class="ds">官方训练计划 · 3.8 万人正在跟练</div></div>
     </div>
-    <div class="section-title pad">🔥 热门榜单 <span class="more" onclick="toast('查看完整榜单')">全部 ›</span></div>
+    <div class="section-title pad">🔥 热门榜单 <span class="more" >全部 ›</span></div>
     <div class="rank-row" onclick="go('postdetail')"><div class="no top">1</div><div class="thumb">${rawImg('run')}</div><div class="ct"><div class="t">从 0 到半马：12 周训练笔记</div><div class="d">林深时见鹿 · 12.8 万阅读</div></div><div class="hot"><svg class="ic xs"><use href="#i-flame"/></svg>9.8k</div></div>
     <div class="rank-row" onclick="go('postdetail')"><div class="no top">2</div><div class="thumb">${rawImg('strength')}</div><div class="ct"><div class="t">深蹲总做错？3 个细节纠正</div><div class="d">教练王 · 9.2 万阅读</div></div><div class="hot"><svg class="ic xs"><use href="#i-flame"/></svg>7.4k</div></div>
     <div class="rank-row" onclick="go('postdetail')"><div class="no top">3</div><div class="thumb">${rawImg('food')}</div><div class="ct"><div class="t">减脂期一周午餐搭配</div><div class="d">营养师小林 · 6.7 万阅读</div></div><div class="hot"><svg class="ic xs"><use href="#i-flame"/></svg>5.1k</div></div>
-    <div class="section-title pad">达人推荐 <span class="more" onclick="toast('发现更多达人')">更多 ›</span></div>
+    <div class="section-title pad">达人推荐 <span class="more" >更多 ›</span></div>
     <div class="people-strip">
       <div class="pcard" onclick="go('author')"><div class="av a1">鹿</div><div class="nm">林深时见鹿</div><div class="ds">32.5k 粉丝</div><div class="fb" onclick="event.stopPropagation();followToggle(this)">+ 关注</div></div>
       <div class="pcard" onclick="go('author')"><div class="av a2">王</div><div class="nm">教练王</div><div class="ds">18.2k 粉丝</div><div class="fb" onclick="event.stopPropagation();followToggle(this)">+ 关注</div></div>
       <div class="pcard" onclick="go('author')"><div class="av a3">Anna</div><div class="nm">Anna 瑜伽</div><div class="ds">24.6k 粉丝</div><div class="fb" onclick="event.stopPropagation();followToggle(this)">+ 关注</div></div>
       <div class="pcard" onclick="go('author')"><div class="av a5">阿</div><div class="nm">阿May</div><div class="ds">9.8k 粉丝</div><div class="fb" onclick="event.stopPropagation();followToggle(this)">+ 关注</div></div>
     </div>
-    <div class="section-title pad">精选视频 <span class="more" onclick="toast('查看全部视频')">更多 ›</span></div>
+    <div class="section-title pad">精选视频 <span class="more" >更多 ›</span></div>
     <div style="padding:0 16px">
       <div class="course-row" onclick="openVideo('hiit')"><div class="thumb">${rawImg('hiit')}</div><div class="ct"><div class="t">HIIT 燃脂 20 分钟</div><div class="d">12:30 · 8.2 万人练过</div></div><span class="go">播放 ›</span></div>
       <div class="course-row" onclick="openVideo('yoga')"><div class="thumb">${rawImg('yoga')}</div><div class="ct"><div class="t">晨间瑜伽拉伸</div><div class="d">08:15 · 适合新手</div></div><span class="go">播放 ›</span></div>
@@ -643,16 +643,16 @@ const COMM_TABS = {
 
   // ③ 附近：定位 + 附近跑友 + 附近活动 + 附近动态
   附近: () => `
-    <div class="loc-bar"><svg class="ic xs"><use href="#i-target"/></svg><span>当前位置 <b>北京 · 朝阳区</b> · 3 km 内</span><span class="sw" onclick="toast('切换定位')">切换 ›</span></div>
-    <div class="section-title pad">附近的跑友 <span class="more" onclick="toast('查看全部跑友')">更多 ›</span></div>
+    <div class="loc-bar"><svg class="ic xs"><use href="#i-target"/></svg><span>当前位置 <b>北京 · 朝阳区</b> · 3 km 内</span><span class="sw" >切换 ›</span></div>
+    <div class="section-title pad">附近的跑友 <span class="more" >更多 ›</span></div>
     <div class="person-row" onclick="go('author')"><div class="av a2">陈</div><div class="ct"><div class="n">陈一跑</div><div class="d">本周跑了 32 km · 配速 5'20"</div></div><div class="dist">0.8 km</div><div class="fb" onclick="event.stopPropagation();followToggle(this)">+ 关注</div></div>
     <div class="person-row" onclick="go('author')"><div class="av a3">Lina</div><div class="ct"><div class="n">Lina 爱晨跑</div><div class="d">晨跑打卡 21 天 · 共同关注 3 人</div></div><div class="dist">1.2 km</div><div class="fb" onclick="event.stopPropagation();followToggle(this)">+ 关注</div></div>
     <div class="person-row" onclick="go('author')"><div class="av a4">老</div><div class="ct"><div class="n">老周不慢</div><div class="d">全马 3:28 · 周末约跑发起人</div></div><div class="dist">1.9 km</div><div class="fb" onclick="event.stopPropagation();followToggle(this)">+ 关注</div></div>
     <div class="person-row" onclick="go('author')"><div class="av a5">小</div><div class="ct"><div class="n">小鱼瑜伽</div><div class="d">瑜伽教练 · 附近场馆可约课</div></div><div class="dist">2.6 km</div><div class="fb" onclick="event.stopPropagation();followToggle(this)">+ 关注</div></div>
-    <div class="section-title pad">附近活动 <span class="more" onclick="toast('发现更多活动')">更多 ›</span></div>
-    <div class="ev-row" onclick="toast('报名成功，周六见！')"><div class="dt"><div class="d">21</div><div class="m">周六</div></div><div class="ct"><div class="t">朝阳公园晨跑局</div><div class="d">06:30 集合 · 5 km 轻松跑 · 32 人已报名</div></div><div class="jn">报名 ›</div></div>
-    <div class="ev-row" onclick="toast('报名成功，周日见！')"><div class="dt"><div class="d">22</div><div class="m">周日</div></div><div class="ct"><div class="t">奥森 10 km 拉练</div><div class="d">07:00 集合 · 配速 6'00" · 18 人已报名</div></div><div class="jn">报名 ›</div></div>
-    <div class="ev-row" onclick="toast('报名成功，周三见！')"><div class="dt"><div class="d">25</div><div class="m">周三</div></div><div class="ct"><div class="t">社区瑜伽公开课</div><div class="d">19:30 · 免费体验 · 12 人已报名</div></div><div class="jn">报名 ›</div></div>
+    <div class="section-title pad">附近活动 <span class="more" >更多 ›</span></div>
+    <div class="ev-row" ><div class="dt"><div class="d">21</div><div class="m">周六</div></div><div class="ct"><div class="t">朝阳公园晨跑局</div><div class="d">06:30 集合 · 5 km 轻松跑 · 32 人已报名</div></div><div class="jn">报名 ›</div></div>
+    <div class="ev-row" ><div class="dt"><div class="d">22</div><div class="m">周日</div></div><div class="ct"><div class="t">奥森 10 km 拉练</div><div class="d">07:00 集合 · 配速 6'00" · 18 人已报名</div></div><div class="jn">报名 ›</div></div>
+    <div class="ev-row" ><div class="dt"><div class="d">25</div><div class="m">周三</div></div><div class="ct"><div class="t">社区瑜伽公开课</div><div class="d">19:30 · 免费体验 · 12 人已报名</div></div><div class="jn">报名 ›</div></div>
     <div class="section-title pad">附近动态</div>
     <div class="feed-card" onclick="go('postdetail')">
       <div class="fh"><div class="avatar a3">Lina</div><div><div class="name">Lina 爱晨跑</div><div class="meta">12 分钟前 · 距你 1.2 km</div></div></div>
@@ -667,7 +667,7 @@ const COMM_TABS = {
     <div class="tagcloud" onclick="tagPick(event)">
       <div class="chip active">全部</div><div class="chip">跑步</div><div class="chip">力量</div><div class="chip">瑜伽</div><div class="chip">饮食</div><div class="chip">打卡</div><div class="chip">新手</div>
     </div>
-    <div class="section-title pad">🔥 正在热议 <span class="more" onclick="toast('查看全部话题')">全部 ›</span></div>
+    <div class="section-title pad">🔥 正在热议 <span class="more" >全部 ›</span></div>
     <div class="topic-card" onclick="go('topic')">
       <div class="th">${rawImg('yoga')}<div class="pn">8.4 万人参与 · 今日 2,301 条动态</div></div>
       <div class="bb"><div><div class="t">#晨间拉伸挑战</div><div class="d">连续 7 天，用 10 分钟唤醒身体</div></div><div class="jn" onclick="event.stopPropagation();smallJoin(this)">参与</div></div>
@@ -702,21 +702,21 @@ const VIEWS = {
         <div class="wweather"><div class="ww">24°</div><div class="wl">晴 · 北京</div><div class="wh">最高 27° / 最低 18°</div></div>
       </div>
       <div class="app-grid">
-        <div class="app c-blue" onclick="toast('打开 微信')"><div class="ico"><svg class="ic"><use href="#i-chat"/></svg></div><div class="nm">微信</div></div>
-        <div class="app c-green" onclick="toast('打开 健康')"><div class="ico"><svg class="ic"><use href="#i-data"/></svg></div><div class="nm">健康</div></div>
-        <div class="app c-indigo" onclick="toast('打开 通讯录')"><div class="ico"><svg class="ic"><use href="#i-user"/></svg></div><div class="nm">通讯录</div></div>
-        <div class="app c-orange" onclick="toast('打开 相机')"><div class="ico"><svg class="ic"><use href="#i-target"/></svg></div><div class="nm">相机</div></div>
-        <div class="app c-blue" onclick="toast('打开 Safari')"><div class="ico"><svg class="ic"><use href="#i-search"/></svg></div><div class="nm">Safari</div></div>
+        <div class="app c-blue" ><div class="ico"><svg class="ic"><use href="#i-chat"/></svg></div><div class="nm">微信</div></div>
+        <div class="app c-green" ><div class="ico"><svg class="ic"><use href="#i-data"/></svg></div><div class="nm">健康</div></div>
+        <div class="app c-indigo" ><div class="ico"><svg class="ic"><use href="#i-user"/></svg></div><div class="nm">通讯录</div></div>
+        <div class="app c-orange" ><div class="ico"><svg class="ic"><use href="#i-target"/></svg></div><div class="nm">相机</div></div>
+        <div class="app c-blue" ><div class="ico"><svg class="ic"><use href="#i-search"/></svg></div><div class="nm">Safari</div></div>
         <div class="app run" onclick="enterApp()" title="点击进入 RUN"><div class="ico">R</div><div class="nm">RUN</div></div>
-        <div class="app c-pink" onclick="toast('打开 购物')"><div class="ico"><svg class="ic"><use href="#i-bag"/></svg></div><div class="nm">购物</div></div>
-        <div class="app c-purple" onclick="toast('打开 睡眠')"><div class="ico"><svg class="ic"><use href="#i-moon"/></svg></div><div class="nm">睡眠</div></div>
+        <div class="app c-pink" ><div class="ico"><svg class="ic"><use href="#i-bag"/></svg></div><div class="nm">购物</div></div>
+        <div class="app c-purple" ><div class="ico"><svg class="ic"><use href="#i-moon"/></svg></div><div class="nm">睡眠</div></div>
       </div>
       <div class="dots"><i class="on"></i><i></i></div>
       <div class="dock">
-        <div class="d" style="background:linear-gradient(145deg,#5ace6b,#1a9e46)" onclick="toast('打开 电话')"><svg class="ic"><use href="#i-chat"/></svg></div>
-        <div class="d" style="background:linear-gradient(145deg,#5ac8fa,#0a84ff)" onclick="toast('打开 信息')"><svg class="ic"><use href="#i-comment"/></svg></div>
-        <div class="d" style="background:linear-gradient(145deg,#ffb26b,#ff7a18)" onclick="toast('打开 音乐')"><svg class="ic"><use href="#i-play"/></svg></div>
-        <div class="d" style="background:linear-gradient(145deg,#8e9ba8,#5a6672)" onclick="toast('打开 设置')"><svg class="ic"><use href="#i-more"/></svg></div>
+        <div class="d" style="background:linear-gradient(145deg,#5ace6b,#1a9e46)" ><svg class="ic"><use href="#i-chat"/></svg></div>
+        <div class="d" style="background:linear-gradient(145deg,#5ac8fa,#0a84ff)" ><svg class="ic"><use href="#i-comment"/></svg></div>
+        <div class="d" style="background:linear-gradient(145deg,#ffb26b,#ff7a18)" ><svg class="ic"><use href="#i-play"/></svg></div>
+        <div class="d" style="background:linear-gradient(145deg,#8e9ba8,#5a6672)" ><svg class="ic"><use href="#i-more"/></svg></div>
       </div>
       <div class="home-ind"></div>
     </div>`,
@@ -744,44 +744,44 @@ const VIEWS = {
 
   home: () => `
     <div class="view-anim">
-      <div class="topbar"><h2>首页</h2><span class="right" onclick="toast('搜索')"><svg class="ic"><use href="#i-search"/></svg><svg class="ic"><use href="#i-plus"/></svg></span></div>
+      <div class="topbar"><h2>首页</h2><span class="right" ><svg class="ic"><use href="#i-search"/></svg><svg class="ic"><use href="#i-plus"/></svg></span></div>
       <div class="tabs" onclick="tabSwitch(this,event)"><div class="t on">关注</div><div class="t">推荐</div><div class="t">话题</div><div class="t">挑战</div></div>
       <div class="quick-acts" id="gd-quick">
         <div class="qa run" onclick="go('diet')"><svg class="ic"><use href="#i-meal"/></svg><div class="l">饮食录入</div></div>
-        <div class="qa" onclick="toast('记录喝水 250ml ✓')"><svg class="ic"><use href="#i-drop"/></svg><div class="l">喝水</div></div>
-        <div class="qa" onclick="toast('今日已打卡 ✓')"><svg class="ic"><use href="#i-check"/></svg><div class="l">打卡</div></div>
-        <div class="qa" onclick="toast('记录睡眠 7h30m')"><svg class="ic"><use href="#i-moon"/></svg><div class="l">睡眠</div></div>
+        <div class="qa" ><svg class="ic"><use href="#i-drop"/></svg><div class="l">喝水</div></div>
+        <div class="qa" ><svg class="ic"><use href="#i-check"/></svg><div class="l">打卡</div></div>
+        <div class="qa" ><svg class="ic"><use href="#i-moon"/></svg><div class="l">睡眠</div></div>
       </div>
       <div class="post">
         <div class="head"><div class="avatar a3">林</div><div><div class="name">林深时见鹿</div><div class="meta">10 分钟前 · 晨跑 5.2km</div></div><div class="follow" onclick="followToggle(this)">+ 关注</div></div>
         <div class="title">清晨 5 公里打卡，配速终于破 6！</div>
         ${img('run','media')}<span class="badge" style="position:absolute;left:26px;bottom:26px">📍 滨江公园</span>
-        <div class="stats"><div class="s" onclick="likeToggle(this,328)"><svg class="ic xs"><use href="#i-heart"/></svg> <b>328</b></div><div class="s" onclick="toast('查看评论')"><svg class="ic xs"><use href="#i-comment"/></svg> <b>42</b></div><div class="s" onclick="toast('分享帖子')"><svg class="ic xs"><use href="#i-share"/></svg> <b>15</b></div></div>
+        <div class="stats"><div class="s" onclick="likeToggle(this,328)"><svg class="ic xs"><use href="#i-heart"/></svg> <b>328</b></div><div class="s" ><svg class="ic xs"><use href="#i-comment"/></svg> <b>42</b></div><div class="s" ><svg class="ic xs"><use href="#i-share"/></svg> <b>15</b></div></div>
       </div>
-      <div class="section-title pad" id="gd-video">视频推荐 <span class="more" onclick="toast('查看全部视频')">查看更多 ›</span></div>
+      <div class="section-title pad" id="gd-video">视频推荐 <span class="more" >查看更多 ›</span></div>
       <div class="vcarousel" id="gd-video-list">
         <div class="vcard" onclick="openVideo('hiit')"><div class="th">${img('hiit')}<div class="play"><svg class="ic xs"><use href="#i-play"/></svg></div><div class="dur">12:30</div></div><div class="ct"><div class="t">HIIT 燃脂 20 分钟</div><div class="a">Lisa · 教练</div></div></div>
         <div class="vcard" onclick="openVideo('yoga')"><div class="th">${img('yoga')}<div class="play"><svg class="ic xs"><use href="#i-play"/></svg></div><div class="dur">08:15</div></div><div class="ct"><div class="t">晨间瑜伽拉伸</div><div class="a">Anna · 教练</div></div></div>
         <div class="vcard" onclick="openVideo('strength')"><div class="th">${img('strength')}<div class="play"><svg class="ic xs"><use href="#i-play"/></svg></div><div class="dur">15:40</div></div><div class="ct"><div class="t">居家力量训练</div><div class="a">教练王</div></div></div>
         <div class="vcard" onclick="openVideo('cycling')"><div class="th">${img('cycling')}<div class="play"><svg class="ic xs"><use href="#i-play"/></svg></div><div class="dur">06:50</div></div><div class="ct"><div class="t">城市骑行 Vlog</div><div class="a">阿May</div></div></div>
       </div>
-      <div class="section-title pad">课程 <span class="more" onclick="toast('查看全部课程')">查看全部 ›</span></div>
+      <div class="section-title pad">课程 <span class="more" >查看全部 ›</span></div>
       <div style="padding:0 16px">
         <div class="course-row" onclick="go('project')"><div class="thumb">${img('hiit')}</div><div class="ct"><div class="t">HIIT 燃脂 20 分钟</div><div class="d">初级 · 12 节 · 教练 Lisa</div></div><span class="go">查看 ›</span></div>
         <div class="course-row" onclick="go('project')"><div class="thumb">${img('yoga')}</div><div class="ct"><div class="t">瑜伽拉伸放松</div><div class="d">全员 · 8 节 · 教练 Anna</div></div><span class="go">查看 ›</span></div>
       </div>
-      <div class="section-title pad">内容推荐 <span class="more" onclick="toast('换一批')">换一批</span></div>
+      <div class="section-title pad">内容推荐 <span class="more" >换一批</span></div>
       <div class="rec-grid pad">
-        <div class="g" onclick="toast('跑姿纠正')">${img('run')}<span>跑姿纠正</span></div>
-        <div class="g" onclick="toast('增肌计划')">${img('strength')}<span>增肌计划</span></div>
-        <div class="g" onclick="toast('减脂餐')">${img('food')}<span>减脂餐</span></div>
+        <div class="g" >${img('run')}<span>跑姿纠正</span></div>
+        <div class="g" >${img('strength')}<span>增肌计划</span></div>
+        <div class="g" >${img('food')}<span>减脂餐</span></div>
       </div>
       <div style="height:14px"></div>
     </div>`,
 
   community: () => `
     <div class="view-anim">
-      <div class="topbar"><h2>社区</h2><span class="right" onclick="toast('搜索')"><svg class="ic"><use href="#i-search"/></svg><svg class="ic" onclick="event.stopPropagation();go('compose')"><use href="#i-plus"/></svg></span></div>
+      <div class="topbar"><h2>社区</h2><span class="right" ><svg class="ic"><use href="#i-search"/></svg><svg class="ic" onclick="event.stopPropagation();go('compose')"><use href="#i-plus"/></svg></span></div>
       <div class="tabs" id="communityTabs" onclick="setCommunityTabFromEvent(this,event)">
         ${['关注','推荐','附近','话题'].map(t=>`<div class="t${communityTab===t?' on':''}" data-ct="${t}">${t}</div>`).join('')}
       </div>
@@ -796,20 +796,20 @@ const VIEWS = {
         <div class="p"><div class="n">12</div><div class="l">分享数</div></div>
         <div class="p"><div class="n">进行中</div><div class="l">运动状态</div></div>
       </div>
-      <div class="section-title pad">今日课程 <span class="more" onclick="toast('查看全部课程')">全部 ›</span></div>
+      <div class="section-title pad">今日课程 <span class="more" >全部 ›</span></div>
       <div style="padding:0 16px">
         <div class="today-row" onclick="go('project')"><div class="ic"><svg class="ic"><use href="#i-run"/></svg></div><div class="ct"><div class="t">晨间慢跑</div><div class="d">5.0 km · 约 30 分钟</div></div><div class="btn">开始</div></div>
         <div class="today-row" onclick="go('project')"><div class="ic"><svg class="ic"><use href="#i-flame"/></svg></div><div class="ct"><div class="t">核心力量</div><div class="d">4 组 · 约 20 分钟</div></div><div class="btn">开始</div></div>
         <div class="today-row" onclick="go('project')"><div class="ic"><svg class="ic"><use href="#i-mountain"/></svg></div><div class="ct"><div class="t">放松拉伸</div><div class="d">全身 · 约 10 分钟</div></div><div class="btn">开始</div></div>
       </div>
       <div class="section-title pad">新建训练项目 <span class="more">＋</span></div>
-      <div class="newproj" onclick="toast('新建训练项目')">${img('shoes')}<div class="ov"><div class="tt">＋ 新建项目名称</div></div></div>
+      <div class="newproj" >${img('shoes')}<div class="ov"><div class="tt">＋ 新建项目名称</div></div></div>
       <div style="height:14px"></div>
     </div>`,
 
   data: () => `
     <div class="view-anim">
-      <div class="ws-head"><div class="tabs"><div class="t on" onclick="toast('运动')">运动</div><div class="t" onclick="toast('关注')">关注</div></div></div>
+      <div class="ws-head"><div class="tabs"><div class="t on" >运动</div><div class="t" >关注</div></div></div>
       <div class="week">
         <div class="d"><div class="day">日</div><div class="num">2</div></div>
         <div class="d"><div class="day">一</div><div class="num">3</div></div>
@@ -857,13 +857,13 @@ const VIEWS = {
         <div class="id">ID: RUN_88231 · 已认证跑者</div>
       </div>
       <div class="tagrow">
-        <div class="tg" onclick="toast('燃脂')"><div class="c a1"><svg class="ic"><use href="#i-flame"/></svg></div><div class="l">燃脂</div></div>
-        <div class="tg" onclick="toast('登山')"><div class="c a3"><svg class="ic"><use href="#i-mountain"/></svg></div><div class="l">登山</div></div>
-        <div class="tg" onclick="toast('骑行')"><div class="c a2"><svg class="ic"><use href="#i-bike"/></svg></div><div class="l">骑行</div></div>
+        <div class="tg" ><div class="c a1"><svg class="ic"><use href="#i-flame"/></svg></div><div class="l">燃脂</div></div>
+        <div class="tg" ><div class="c a3"><svg class="ic"><use href="#i-mountain"/></svg></div><div class="l">登山</div></div>
+        <div class="tg" ><div class="c a2"><svg class="ic"><use href="#i-bike"/></svg></div><div class="l">骑行</div></div>
         <div class="tg" onclick="go('create')"><div class="c a4"><svg class="ic"><use href="#i-plus"/></svg></div><div class="l">自定义</div></div>
       </div>
-      <div class="section-title pad">总数据 <span class="more" onclick="toast('查看全部')">›</span></div>
-      <div class="data-tabs"><div class="t on">本周</div><div class="t" onclick="toast('本月')">本月</div><div class="t" onclick="toast('全部')">全部</div></div>
+      <div class="section-title pad">总数据 <span class="more" >›</span></div>
+      <div class="data-tabs"><div class="t on">本周</div><div class="t" >本月</div><div class="t" >全部</div></div>
       <div class="proj-grid">
         <div class="pc" onclick="go('training')">${img('run','ph')}<div class="ct"><div class="t">晨跑计划</div><div class="v">12,400 卡</div></div></div>
         <div class="pc" onclick="go('training')">${img('cycling','ph')}<div class="ct"><div class="t">骑行挑战</div><div class="v">8,900 卡</div></div></div>
@@ -904,15 +904,15 @@ const VIEWS = {
       <div class="meal">${img('dbfast','th')}<div class="ct"><div class="t">燕麦莓果碗</div><div class="m">07:20 · 1 份</div><div class="mac"><span>碳 48</span><span>蛋 14</span><span>脂 9</span></div></div><div class="kcal"><div class="v">320</div><div class="l">千卡</div></div></div>
       <div class="meal">${img('dlunch','th')}<div class="ct"><div class="t">鸡胸蔬菜沙拉</div><div class="m">12:10 · 1 份</div><div class="mac"><span>碳 40</span><span>蛋 45</span><span>脂 18</span></div></div><div class="kcal"><div class="v">520</div><div class="l">千卡</div></div></div>
       <div class="meal">${img('ddinner','th')}<div class="ct"><div class="t">香煎三文鱼</div><div class="m">18:40 · 1 份</div><div class="mac"><span>碳 35</span><span>蛋 38</span><span>脂 28</span></div></div><div class="kcal"><div class="v">640</div><div class="l">千卡</div></div></div>
-      <div class="addbtn" onclick="toast('添加食物')"><svg class="ic sm"><use href="#i-plus"/></svg> 添加食物</div>
-      <button class="btn-primary" style="margin:0 16px 16px" onclick="toast('已保存今日饮食 ✓')">保存今日饮食</button>
+      <div class="addbtn" ><svg class="ic sm"><use href="#i-plus"/></svg> 添加食物</div>
+      <button class="btn-primary" style="margin:0 16px 16px" >保存今日饮食</button>
     </div>`,
 
   project: () => `
     <div class="view-anim">
       <div class="topbar"><div class="back" onclick="back()"><svg class="ic"><use href="#i-back"/></svg></div><h2>项目详情</h2><span class="right"><svg class="ic"><use href="#i-more"/></svg></span></div>
-      <div class="pjhero" onclick="toast('播放演示视频')">${img('hiit')}<div class="play"><svg class="ic"><use href="#i-play"/></svg></div></div>
-      <div class="pjtabs"><div class="t on">动作</div><div class="t" onclick="toast('计划')">计划</div><div class="t" onclick="toast('数据')">数据</div><div class="t" onclick="toast('推荐')">推荐</div></div>
+      <div class="pjhero" >${img('hiit')}<div class="play"><svg class="ic"><use href="#i-play"/></svg></div></div>
+      <div class="pjtabs"><div class="t on">动作</div><div class="t" >计划</div><div class="t" >数据</div><div class="t" >推荐</div></div>
       <div style="padding:14px 16px;display:flex;flex-direction:column;gap:10px">
         <div class="course-row"><div class="thumb">${img('hiit')}</div><div class="ct"><div class="t">波比跳</div><div class="d">15 次 × 3 组</div></div><span class="go">演示 ›</span></div>
         <div class="course-row"><div class="thumb">${img('strength')}</div><div class="ct"><div class="t">深蹲</div><div class="d">20 次 × 3 组</div></div><span class="go">演示 ›</span></div>
@@ -924,7 +924,7 @@ const VIEWS = {
   fav: () => `
     <div class="view-anim">
       <div class="topbar"><div class="back" onclick="back()"><svg class="ic"><use href="#i-back"/></svg></div><h2>收藏</h2><span class="right"><svg class="ic"><use href="#i-more"/></svg></span></div>
-      <div class="fav-tabs"><div class="t on">帖子</div><div class="t" onclick="toast('视频')">视频</div><div class="t" onclick="toast('商品')">商品</div></div>
+      <div class="fav-tabs"><div class="t on">帖子</div><div class="t" >视频</div><div class="t" >商品</div></div>
       <div class="fav-sort">排序：<b style="color:var(--ink-2)">发布时间</b> ▾ &nbsp;|&nbsp; 热度 ▾</div>
       <div class="fav-row" onclick="go('article')"><div class="th">${img('marathon')}</div><div class="ct"><div class="t">全马完赛装备清单</div><div class="m">收藏于 11-02 · 2.3k 赞</div></div><span class="more"><svg class="ic"><use href="#i-more"/></svg></span></div>
       <div class="fav-row" onclick="go('article')"><div class="th">${img('shoes')}</div><div class="ct"><div class="t">2026 跑鞋横评</div><div class="m">收藏于 10-28 · 1.8k 赞</div></div><span class="more"><svg class="ic"><use href="#i-more"/></svg></span></div>
@@ -948,13 +948,13 @@ const VIEWS = {
         <div class="txt">前四周只练「能连续慢跑 30 分钟」，不追配速；第五周开始加入间歇跑；最后四周拉长距离到 18 公里。记住：休息日和训练日同样重要。</div>
         <div class="tags"><span class="chip">#半马</span><span class="chip">#跑步打卡</span><span class="chip">#新手必看</span></div>
         <div class="post" style="margin:16px 0 0;padding:12px 0;border:none">
-          <div class="stats"><div class="s" onclick="likeToggle(this,1200)"><svg class="ic xs"><use href="#i-heart"/></svg> <b>1.2k</b></div><div class="s" onclick="toast('查看评论')"><svg class="ic xs"><use href="#i-comment"/></svg> <b>186</b></div><div class="s" onclick="toast('分享帖子')"><svg class="ic xs"><use href="#i-share"/></svg> <b>92</b></div></div>
+          <div class="stats"><div class="s" onclick="likeToggle(this,1200)"><svg class="ic xs"><use href="#i-heart"/></svg> <b>1.2k</b></div><div class="s" ><svg class="ic xs"><use href="#i-comment"/></svg> <b>186</b></div><div class="s" ><svg class="ic xs"><use href="#i-share"/></svg> <b>92</b></div></div>
         </div>
       </div>
       <div class="section-title pad" style="margin-top:4px">评论 186</div>
       <div class="cmt"><div class="avatar a2">陈</div><div class="ct"><div class="nm">陈一跑</div><div class="tx">同款计划，第三周就破 5 公里了，感谢分享！</div><div class="mt">2 小时前 · 赞 18</div></div></div>
       <div class="cmt"><div class="avatar a3">阿</div><div class="ct"><div class="nm">阿May</div><div class="tx">求推荐入门跑鞋 🙏</div><div class="mt">5 小时前 · 赞 6</div></div></div>
-      <div class="comment-bar"><div class="inp" onclick="toast('评论功能')">说点什么…</div><div class="send" onclick="toast('评论已发送 ✓')">发送</div></div>
+      <div class="comment-bar"><div class="inp" >说点什么…</div><div class="send" >发送</div></div>
     </div>`,
 
   topic: () => `
@@ -994,9 +994,9 @@ const VIEWS = {
       </div>
       <div class="compose-tools">
         <div class="tool" onclick="addPhoto()"><div class="ci"><svg class="ic sm"><use href="#i-mountain"/></svg></div>图片</div>
-        <div class="tool" onclick="toast('选择话题')"><div class="ci"><svg class="ic sm"><use href="#i-hash"/></svg></div>话题</div>
-        <div class="tool" onclick="toast('添加位置')"><div class="ci"><svg class="ic sm"><use href="#i-flag"/></svg></div>位置</div>
-        <div class="tool" onclick="toast('@好友')"><div class="ci"><svg class="ic sm"><use href="#i-user"/></svg></div>@好友</div>
+        <div class="tool" ><div class="ci"><svg class="ic sm"><use href="#i-hash"/></svg></div>话题</div>
+        <div class="tool" ><div class="ci"><svg class="ic sm"><use href="#i-flag"/></svg></div>位置</div>
+        <div class="tool" ><div class="ci"><svg class="ic sm"><use href="#i-user"/></svg></div>@好友</div>
       </div>
       <div class="compose-photos" id="composePhotos"></div>
       <div class="section-title pad">添加到</div>
@@ -1017,7 +1017,7 @@ const VIEWS = {
       <div class="section-title pad" style="margin:6px 0 0">评论 42</div>
       <div class="cmt"><div class="avatar a2">陈</div><div class="ct"><div class="nm">陈一跑</div><div class="tx">同款计划，第三周就破 5 公里了，感谢分享！</div><div class="mt">2 小时前 · 赞 18</div></div></div>
       <div class="cmt"><div class="avatar a3">阿</div><div class="ct"><div class="nm">阿May</div><div class="tx">求推荐入门跑鞋 🙏</div><div class="mt">5 小时前 · 赞 6</div></div></div>
-      <div class="comment-bar"><div class="inp">说点什么…</div><div class="send" onclick="toast('评论已发送 ✓')">发送</div></div>
+      <div class="comment-bar"><div class="inp">说点什么…</div><div class="send" >发送</div></div>
     </div>`,
 
   author: () => `
@@ -1033,10 +1033,10 @@ const VIEWS = {
         <div class="s"><div class="v">32.5k</div><div class="l">粉丝</div></div>
         <div class="s"><div class="v">186</div><div class="l">关注</div></div>
       </div>
-      <div class="author-tabs"><div class="t on">回复</div><div class="t" onclick="toast('动态')">动态</div><div class="t" onclick="toast('课程')">课程</div></div>
+      <div class="author-tabs"><div class="t on">回复</div><div class="t" >动态</div><div class="t" >课程</div></div>
       <div class="reply-card">
         <textarea class="inp" rows="2" placeholder="回复 @林深时见鹿 ..."></textarea>
-        <div class="row"><button onclick="toast('回复已提交 ✓')">提交回复</button></div>
+        <div class="row"><button >提交回复</button></div>
       </div>
       <div class="cmt"><div class="avatar a2">陈</div><div class="ct"><div class="nm">陈一跑</div><div class="tx">已跟着练了一周，膝盖舒服多了 👍</div><div class="mt">2 小时前</div></div></div>
       <div class="cmt"><div class="avatar a3">阿</div><div class="ct"><div class="nm">阿May</div><div class="tx">博主下次出个跑鞋测评吧～</div><div class="mt">5 小时前</div></div></div>
@@ -1049,14 +1049,14 @@ const VIEWS = {
       <div class="topbar"><div class="back" onclick="back()"><svg class="ic"><use href="#i-back"/></svg></div><h2>帮助中心</h2><span class="right"><svg class="ic"><use href="#i-search"/></svg></span></div>
       <div class="help-q"><div class="t"><span class="n">1</span>如何同步我的运动数据？</div><div class="a">在「我的 → 数据同步」中授权微信运动或 Apple Health，RUN 将自动每日同步步数、距离与心率。</div></div>
       <div class="help-q"><div class="t"><span class="n">2</span>训练计划可以离线使用吗？</div><div class="a">已下载的计划支持完全离线，记录将在重新联网后自动上传。</div></div>
-      <div class="help-tabs"><div class="t on">关注</div><div class="t" onclick="toast('推荐')">推荐</div></div>
-      <div class="section-title pad">活动推荐 <span class="more" onclick="toast('更多活动')">更多 ›</span></div>
-      <div class="help-act" onclick="toast('报名：城市夜跑接力赛')"><div class="ic"><svg class="ic"><use href="#i-run"/></svg></div><div class="ct"><div class="t">城市夜跑接力赛</div><div class="d">11-15 周六 19:30 · 滨江跑道</div></div><span class="go">报名 ›</span></div>
-      <div class="help-act" onclick="toast('报名：周末户外瑜伽')"><div class="ic"><svg class="ic"><use href="#i-mountain"/></svg></div><div class="ct"><div class="t">周末户外瑜伽</div><div class="d">11-16 周日 09:00 · 中央公园</div></div><span class="go">报名 ›</span></div>
+      <div class="help-tabs"><div class="t on">关注</div><div class="t" >推荐</div></div>
+      <div class="section-title pad">活动推荐 <span class="more" >更多 ›</span></div>
+      <div class="help-act" ><div class="ic"><svg class="ic"><use href="#i-run"/></svg></div><div class="ct"><div class="t">城市夜跑接力赛</div><div class="d">11-15 周六 19:30 · 滨江跑道</div></div><span class="go">报名 ›</span></div>
+      <div class="help-act" ><div class="ic"><svg class="ic"><use href="#i-mountain"/></svg></div><div class="ct"><div class="t">周末户外瑜伽</div><div class="d">11-16 周日 09:00 · 中央公园</div></div><span class="go">报名 ›</span></div>
       <div class="section-title pad">锻炼活动</div>
       <div class="help-cards">
-        <div class="c" onclick="toast('马拉松训练营')">${img('marathon')}<span>马拉松训练营</span></div>
-        <div class="c" onclick="toast('团课体验周')">${img('group')}<span>团课体验周</span></div>
+        <div class="c" >${img('marathon')}<span>马拉松训练营</span></div>
+        <div class="c" >${img('group')}<span>团课体验周</span></div>
       </div>
       <div style="height:14px"></div>
     </div>`,
@@ -1082,7 +1082,7 @@ const VIEWS = {
           <div class="f"><span class="k">体重</span><span class="v">68 kg</span></div>
           <div class="f"><span class="k">标签</span><span class="v">晨跑 · 马拉松</span></div>
         </div>
-        <button class="btn-primary" style="margin-top:6px" onclick="toast('身份创建完成 ✓')">完成创建</button>
+        <button class="btn-primary" style="margin-top:6px" >完成创建</button>
       </div>
       <div style="height:14px"></div>
     </div>`,
@@ -1101,12 +1101,12 @@ const VIEWS = {
       <div class="vauthor"><div class="avatar ${d.av}">${d.author[0]}</div><div><div class="nm">${d.author}</div><div class="mt">${d.role} · ${d.fans} 粉丝</div></div><div class="follow" onclick="followToggle(this)">+ 关注</div></div>
       <div class="vacts">
         <div class="a" id="vlike" onclick="videoLike()"><svg class="ic"><use href="#i-heart"/></svg><span id="vlikeN">${d.likes}</span></div>
-        <div class="a" onclick="toast('评论功能演示')"><svg class="ic"><use href="#i-comment"/></svg><span>${d.comments}</span></div>
+        <div class="a" ><svg class="ic"><use href="#i-comment"/></svg><span>${d.comments}</span></div>
         <div class="a" id="vstar" onclick="videoStar()"><svg class="ic"><use href="#i-star"/></svg><span>收藏</span></div>
-        <div class="a" onclick="toast('已复制分享链接')"><svg class="ic"><use href="#i-share"/></svg><span>分享</span></div>
+        <div class="a" ><svg class="ic"><use href="#i-share"/></svg><span>分享</span></div>
       </div>
       <div class="vdesc">${d.desc}</div>
-      <div class="section-title pad">接下来播放 <span class="more" onclick="toast('更多视频')">更多 ›</span></div>
+      <div class="section-title pad">接下来播放 <span class="more" >更多 ›</span></div>
       <div class="vcarousel">
         ${['hiit','yoga','strength','cycling'].filter(k=>k!==currentVideo).map(k=>{const x=VIDEO_DATA[k];return `<div class="vcard" onclick="openVideo('${k}')"><div class="th">${img(x.img)}<div class="play"><svg class="ic xs"><use href="#i-play"/></svg></div><div class="dur">${x.dur}</div></div><div class="ct"><div class="t">${x.title}</div><div class="a">${x.author}</div></div></div>`}).join('')}
       </div>
@@ -1182,14 +1182,14 @@ function back(){ if(stack.length){ render(stack.pop()); } else { render('profile
 function setMain(name){ stack=[]; render(name); }
 function goFlash(){ render('flash'); }
 function enterApp(){ stack=[]; render('home'); }
-function mealSwitch(el){ document.querySelectorAll('.mtabs .t').forEach(x=>x.classList.remove('on')); el.classList.add('on'); toast('切换至 '+el.textContent); }
-function dietSwitch(el){ document.querySelectorAll('.pills2 .p').forEach(x=>x.classList.remove('on')); el.classList.add('on'); toast('按'+el.textContent+'查看'); }
+function mealSwitch(el){ document.querySelectorAll('.mtabs .t').forEach(x=>x.classList.remove('on')); el.classList.add('on'); }
+function dietSwitch(el){ document.querySelectorAll('.pills2 .p').forEach(x=>x.classList.remove('on')); el.classList.add('on'); }
 
 // tab switching (首页顶部分类)
 function tabSwitch(box,ev){
   const t = ev.target.closest('.t'); if(!t) return;
   box.querySelectorAll('.t').forEach(x=>x.classList.remove('on'));
-  t.classList.add('on'); toast('已切换到「'+t.textContent+'」');
+  t.classList.add('on');
 }
 // 社区四个分类页切换（只换内容区，不整页重绘，保持滚动与状态）
 function setCommunityTabFromEvent(box,ev){
@@ -1204,12 +1204,11 @@ function setCommunityTab(name){
   const body = document.getElementById('communityBody');
   if(body) body.innerHTML = COMM_TABS[name]();
   const vp = document.getElementById('view'); if(vp) vp.scrollTop = 0;
-  toast('已切换到「'+name+'」');
 }
 function tagPick(ev){
   const c = ev.target.closest('.chip'); if(!c) return;
   c.parentElement.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));
-  c.classList.add('active'); toast('筛选：'+c.textContent);
+  c.classList.add('active');
 }
 function smallJoin(el){
   if(el.textContent==='已参与'){ el.textContent='参与'; el.style.background=''; toast('已退出话题'); }
